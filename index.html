@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniLearn | Participation Practice</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+  <!-- LMS header -->
+  <header class="topbar">
+    <div class="container-fluid px-4 d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-3">
+        <div class="brand-mark">U</div>
+        <div>
+          <div class="brand-name">UniLearn</div>
+          <div class="brand-subtitle">Student concept prototype</div>
+        </div>
+      </div>
+
+      <div class="d-none d-md-flex align-items-center gap-3 small">
+        <span class="text-white-50">PACM1101</span>
+        <span class="profile-circle">
+          <i class="bi bi-person-fill"></i>
+        </span>
+      </div>
+    </div>
+  </header>
+
+
+  <nav class="unit-nav" aria-label="Unit navigation">
+    <div class="container-fluid px-4 d-flex gap-4 overflow-auto">
+      <a href="#" class="nav-link-item">Content</a>
+      <a href="#" class="nav-link-item">Calendar</a>
+      <a href="#" class="nav-link-item">Announcements</a>
+      <a href="#" class="nav-link-item">Discussions</a>
+      <a href="#" class="nav-link-item active">Participation Practice</a>
+    </div>
+  </nav>
+
+
+  <section class="unit-banner">
+    <div class="container-fluid px-4 py-4">
+      <div class="unit-code">PACM1101 — COMMUNICATION IN PRACTICE</div>
+      <h1 class="unit-title">Participation Practice</h1>
+      <p class="unit-tagline mb-0">
+        A place to work through your ideas before, during and after class.
+      </p>
+    </div>
+  </section>
+
+  <main class="container-fluid px-3 px-md-4 py-4">
+    <section class="progress-panel mb-4" aria-label="Participation progress">
+      <div class="progress-steps">
+        <button class="progress-step active" data-step-target="board">
+          <span>1</span>
+          <small>Start</small>
+        </button>
+
+        <div class="progress-line"></div>
+
+        <button class="progress-step" data-step-target="attempt">
+          <span>2</span>
+          <small>Attempt</small>
+        </button>
+
+        <div class="progress-line"></div>
+
+        <button class="progress-step" data-step-target="feedback">
+          <span>3</span>
+          <small>Feedback</small>
+        </button>
+
+        <div class="progress-line"></div>
+
+        <button class="progress-step" data-step-target="retry">
+          <span>4</span>
+          <small>Try again</small>
+        </button>
+
+        <div class="progress-line"></div>
+
+        <button class="progress-step" data-step-target="bridge">
+          <span>5</span>
+          <small>Ready for class</small>
+        </button>
+      </div>
+    </section>
+
+    <!-- 1. Participation board -->
+    <section id="screen-board" class="prototype-screen active-screen" data-screen="board">
+      <div class="content-card">
+        <span class="eyebrow">WEEK 7 PARTICIPATION</span>
+        <h2 class="section-title mt-2">Start with an attempt</h2>
+        <p class="section-copy">
+          You don’t need to be certain. Share what you think so far.
+        </p>
+
+        <div class="usage-section mt-4">
+          <p class="usage-intro">
+            You can use Participation Practice before, during or after class.
+          </p>
+
+          <div class="class-cycle">
+            <div class="cycle-item">
+              <div class="cycle-icon">
+                <i class="bi bi-pencil-square"></i>
+              </div>
+              <div>
+                <span class="cycle-label">Before class</span>
+                <p>Share an attempt and get feedback.</p>
+              </div>
+            </div>
+
+            <div class="cycle-item">
+              <div class="cycle-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <div>
+                <span class="cycle-label">During class</span>
+                <p>Use your response to join the discussion.</p>
+              </div>
+            </div>
+
+            <div class="cycle-item">
+              <div class="cycle-icon">
+                <i class="bi bi-arrow-repeat"></i>
+              </div>
+              <div>
+                <span class="cycle-label">After class</span>
+                <p>Come back to reflect or revise.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="prompt-box mt-4">
+          <div class="prompt-label">This week's prompt</div>
+          <h3>What’s one concept from this week you’re still unsure about?</h3>
+          <p class="mb-0">This doesn’t need to be your final answer.</p>
+        </div>
+
+        <button class="action-card w-100 text-start mt-3" data-next="attempt">
+          <div class="action-icon">
+            <i class="bi bi-pencil-square"></i>
+          </div>
+
+          <div>
+            <strong>Share my attempt</strong>
+            <span>Write down what you think so far.</span>
+          </div>
+
+          <i class="bi bi-arrow-right ms-auto"></i>
+        </button>
+      </div>
+
+      <div class="content-card mt-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <span class="eyebrow">CLASS ACTIVITY</span>
+            <h3 class="feed-title mt-1 mb-0">Recent contributions</h3>
+          </div>
+          <span class="small text-secondary">2 posts</span>
+        </div>
+
+        <article class="discussion-post mt-3">
+          <div class="avatar anonymous">
+            <i class="bi bi-person"></i>
+          </div>
+
+          <div>
+            <div class="post-meta">
+              <strong>Anonymous student</strong> · 18 min ago
+            </div>
+
+            <p class="mb-2">
+              Sometimes I could have an answer in my head, but I don’t put my hand up because
+              I feel like everyone else probably understands it better than I do.
+            </p>
+
+            <div class="post-actions">
+              <span><i class="bi bi-chat-left-text"></i> 2 replies</span>
+              <span><i class="bi bi-hand-thumbs-up"></i> 4</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="discussion-post">
+          <div class="avatar">JM</div>
+
+          <div>
+            <div class="post-meta">
+              <strong>Jamie M.</strong> · 35 min ago
+            </div>
+
+            <p class="mb-2">
+              If I get something wrong in class, I actually start second guessing the next answer
+              even when I think I know it.
+            </p>
+
+            <div class="post-actions">
+              <span><i class="bi bi-chat-left-text"></i> 3 replies</span>
+              <span><i class="bi bi-hand-thumbs-up"></i> 6</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2. First attempt -->
+    <section id="screen-attempt" class="prototype-screen" data-screen="attempt">
+      <div class="content-card">
+        <button class="text-back mb-3" data-next="board">
+          <i class="bi bi-arrow-left"></i>
+          Back to participation board
+        </button>
+
+        <span class="eyebrow">YOUR FIRST ATTEMPT</span>
+        <h2 class="section-title mt-2">Share what you think so far</h2>
+        <p class="section-copy">
+          It doesn’t have to be right yet. You can come back to it after feedback.
+        </p>
+
+        <form id="attempt-form" class="mt-4">
+          <label for="attempt-text" class="form-label fw-semibold">
+            What's your best attempt?
+          </label>
+
+          <textarea
+            id="attempt-text"
+            class="form-control prototype-input"
+            rows="5"
+          >I think audience is who you’re communicating with, while context is the situation around the communication, but I’m not completely sure how they overlap.</textarea>
+
+          <label for="uncertainty-text" class="form-label fw-semibold mt-4">
+            What are you unsure about?
+          </label>
+
+
+          <textarea
+            id="uncertainty-text"
+            class="form-control prototype-input"
+            rows="3"
+          >I’m not sure when something counts as audience rather than context.</textarea>
+
+          <div class="privacy-card mt-4">
+            <div>
+              <strong>
+                <i class="bi bi-incognito me-2"></i>
+                Hide my name from classmates
+              </strong>
+              <p class="mb-0">Your tutor can still see who posted it.</p>
+            </div>
+
+            <div class="form-check form-switch ms-md-auto">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="anonymous-switch"
+                checked
+              >
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end mt-4">
+            <button type="submit" class="btn primary-btn px-4">
+              Submit attempt
+              <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+
+
+
+    <!-- 3. Tutor feedback -->
+    <section id="screen-feedback" class="prototype-screen" data-screen="feedback">
+      <div class="content-card">
+        <span class="eyebrow">TUTOR FEEDBACK</span>
+        <h2 class="section-title mt-2">Your tutor has replied</h2>
+        <p class="section-copy">
+          Read the feedback below, then revise your response when you’re ready.
+        </p>
+
+        <div class="attempt-summary mt-4">
+          <div class="summary-top">
+            <span class="badge text-bg-light">Attempt 1</span>
+            <span id="identity-label" class="identity-label">
+              <i class="bi bi-eye-slash"></i>
+              Anonymous to classmates
+            </span>
+          </div>
+
+          <p id="attempt-summary-text" class="mb-2"></p>
+
+          <div class="uncertainty-line">
+            <strong>You were unsure about:</strong>
+            <span id="uncertainty-summary-text"></span>
+          </div>
+        </div>
+
+        <div class="tutor-feedback mt-4">
+          <div class="tutor-avatar">T</div>
+
+          <div>
+            <div class="feedback-heading">Tutor feedback</div>
+            <p class="mb-2">
+              Good start. You’ve identified the main difference between audience and context.
+            </p>
+            <p class="mb-0">
+              For your next attempt, try adding an example showing how the same audience
+              could communicate differently in a different context.
+            </p>
+          </div>
+        </div>
+
+        <div class="feedback-actions mt-4">
+          <button class="btn primary-btn" data-next="retry">
+            Try again
+            <i class="bi bi-arrow-repeat ms-1"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    
+    <!-- 4. Revised attempt -->
+    <section id="screen-retry" class="prototype-screen" data-screen="retry">
+      <div class="content-card">
+        <span class="eyebrow">TRY AGAIN</span>
+        <h2 class="section-title mt-2">Revise your response</h2>
+        <p class="section-copy">
+          Your first response stays here while you work on the next one.
+        </p>
+
+        <div class="previous-attempt mt-4">
+          <div class="previous-label">Attempt 1</div>
+          <p id="retry-original-text" class="mb-0"></p>
+        </div>
+
+        <div class="feedback-reminder mt-3">
+          <i class="bi bi-lightbulb"></i>
+          <span>
+            <strong>Tutor suggestion:</strong>
+            Add an example showing how the same audience could communicate differently in a different context.
+          </span>
+        </div>
+
+        <form id="retry-form" class="mt-4">
+          <label for="retry-text" class="form-label fw-semibold">
+            Attempt 2
+          </label>
+
+          <textarea
+            id="retry-text"
+            class="form-control prototype-input"
+            rows="6"
+          >I think audience is who you’re communicating with, while context is the situation the communication happens in. For example, I might speak differently to the same classmate during a tutorial than I would when talking to them outside class.</textarea>
+
+          <div class="d-flex justify-content-end mt-4">
+            <button type="submit" class="btn primary-btn px-4">
+              Submit revised attempt
+              <i class="bi bi-check2-circle ms-1"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 5. Bridge back to class -->
+    <section id="screen-bridge" class="prototype-screen" data-screen="bridge">
+      <div class="content-card">
+        <div class="success-banner">
+          <div class="success-icon">
+            <i class="bi bi-check2"></i>
+          </div>
+
+          <div>
+            <strong>Second attempt completed</strong>
+            <p class="mb-0">Your revised response has been submitted.</p>
+          </div>
+        </div>
+
+        <span class="eyebrow mt-4 d-inline-block">
+          BEFORE, DURING AND AFTER CLASS
+        </span>
+
+        <h2 class="section-title mt-2">Use your response to prepare for class</h2>
+        <p class="section-copy">
+          The forum supports participation before, during and after the tutorial.
+        </p>
+
+        <div class="journey-grid mt-4">
+          <div class="journey-card">
+            <div class="journey-number">1</div>
+            <i class="bi bi-chat-square-text journey-icon"></i>
+            <h3>Before class</h3>
+            <p>Post an attempt, get feedback and revise it before the tutorial.</p>
+          </div>
+
+          <div class="journey-arrow">
+            <i class="bi bi-arrow-right"></i>
+          </div>
+
+          <div class="journey-card">
+            <div class="journey-number">2</div>
+            <i class="bi bi-people journey-icon"></i>
+            <h3>During class</h3>
+            <p>
+              Your tutor can raise common ideas without naming you. You can choose
+              whether you want to add to the discussion.
+            </p>
+          </div>
+
+          <div class="journey-arrow">
+            <i class="bi bi-arrow-right"></i>
+          </div>
+
+          <div class="journey-card">
+            <div class="journey-number">3</div>
+            <i class="bi bi-arrow-repeat journey-icon"></i>
+            <h3>After class</h3>
+            <p>Come back to your response and note whether your thinking changed.</p>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column flex-md-row gap-2 justify-content-between align-items-md-center mt-4">
+          <button class="btn secondary-btn" data-next="board">
+            <i class="bi bi-arrow-counterclockwise me-1"></i>
+            Restart prototype
+          </button>
+
+          <button class="btn primary-btn" id="bring-to-class-btn">
+            <i class="bi bi-person-raised-hand me-1"></i>
+            Save this idea for class
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div
+      id="prototype-toast"
+      class="toast align-items-center border-0"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      <div class="d-flex">
+        <div class="toast-body" id="toast-message">Saved.</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="prototype-footer">
+    <div class="container-fluid px-4 d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>UniLearn — student concept prototype</span>
+      <span>PACM1101 Design Thinking Prototype · V1</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
