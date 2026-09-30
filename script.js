@@ -9,8 +9,14 @@ const screenOrder = [
   "bridge"
 ];
 
+let furthestStepReached = 0;
+
 function showScreen(screenName) {
   const currentIndex = screenOrder.indexOf(screenName);
+
+  if (currentIndex === -1) {
+    return;
+  }
 
   screens.forEach((screen) => {
     const isCurrentScreen = screen.dataset.screen === screenName;
@@ -20,6 +26,10 @@ function showScreen(screenName) {
   progressSteps.forEach((step, index) => {
     step.classList.toggle("active", index === currentIndex);
     step.classList.toggle("complete", index < currentIndex);
+
+    const isAvailable = index <= furthestStepReached;
+    step.disabled = !isAvailable;
+    step.setAttribute("aria-disabled", String(!isAvailable));
   });
 
   window.scrollTo({
@@ -28,18 +38,31 @@ function showScreen(screenName) {
   });
 }
 
-// Buttons inside the prototype use data-next to move between screens.
+function unlockStep(screenName) {
+  const index = screenOrder.indexOf(screenName);
+
+  if (index > furthestStepReached) {
+    furthestStepReached = index;
+  }
+}
+
+// Buttons inside the prototype move the student through the intended flow.
 document.querySelectorAll("[data-next]").forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
-    showScreen(button.dataset.next);
+
+    const nextScreen = button.dataset.next;
+    unlockStep(nextScreen);
+    showScreen(nextScreen);
   });
 });
 
-// The progress bar can also be used to move around the prototype.
-progressSteps.forEach((step) => {
+// Students can only use the progress bar to return to stages already reached.
+progressSteps.forEach((step, index) => {
   step.addEventListener("click", () => {
-    showScreen(step.dataset.stepTarget);
+    if (index <= furthestStepReached) {
+      showScreen(step.dataset.stepTarget);
+    }
   });
 });
 
@@ -69,17 +92,23 @@ document.getElementById("attempt-form").addEventListener("submit", (event) => {
       '<i class="bi bi-person-check"></i> Name visible to classmates';
   }
 
+  unlockStep("feedback");
   showScreen("feedback");
 });
 
 document.getElementById("retry-form").addEventListener("submit", (event) => {
   event.preventDefault();
+
+  unlockStep("bridge");
   showScreen("bridge");
+
   showToast("Your revised response has been submitted.");
 });
 
 document.getElementById("bring-to-class-btn").addEventListener("click", () => {
-  showToast("Saved for class.");
+  showToast(
+    "Saved. You can use this revised response if the topic comes up in class."
+  );
 });
 
 function showToast(message) {

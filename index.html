@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-
 <body>
   <!-- LMS header -->
   <header class="topbar">
@@ -38,7 +37,6 @@
     </div>
   </header>
 
-
   <nav class="unit-nav" aria-label="Unit navigation">
     <div class="container-fluid px-4 d-flex gap-4 overflow-auto">
       <a href="#" class="nav-link-item">Content</a>
@@ -49,13 +47,12 @@
     </div>
   </nav>
 
-
   <section class="unit-banner">
     <div class="container-fluid px-4 py-4">
       <div class="unit-code">PACM1101 — COMMUNICATION IN PRACTICE</div>
       <h1 class="unit-title">Participation Practice</h1>
       <p class="unit-tagline mb-0">
-        A place to work through your ideas before, during and after class.
+        Not sure what to say in class? Share an attempt, get tutor feedback and try again so you feel more prepared to join the discussion.
       </p>
     </div>
   </section>
@@ -64,35 +61,35 @@
     <section class="progress-panel mb-4" aria-label="Participation progress">
       <div class="progress-steps">
         <button class="progress-step active" data-step-target="board">
-          <span>1</span>
-          <small>Start</small>
+          <span><i class="bi bi-info-lg"></i></span>
+          <small>Overview</small>
         </button>
 
         <div class="progress-line"></div>
 
         <button class="progress-step" data-step-target="attempt">
-          <span>2</span>
+          <span>1</span>
           <small>Attempt</small>
         </button>
 
         <div class="progress-line"></div>
 
         <button class="progress-step" data-step-target="feedback">
-          <span>3</span>
+          <span>2</span>
           <small>Feedback</small>
         </button>
 
         <div class="progress-line"></div>
 
         <button class="progress-step" data-step-target="retry">
-          <span>4</span>
+          <span>3</span>
           <small>Try again</small>
         </button>
 
         <div class="progress-line"></div>
 
         <button class="progress-step" data-step-target="bridge">
-          <span>5</span>
+          <span>4</span>
           <small>Ready for class</small>
         </button>
       </div>
@@ -101,52 +98,66 @@
     <!-- 1. Participation board -->
     <section id="screen-board" class="prototype-screen active-screen" data-screen="board">
       <div class="content-card">
-        <span class="eyebrow">WEEK 7 PARTICIPATION</span>
-        <h2 class="section-title mt-2">Start with an attempt</h2>
+        <span class="eyebrow">WEEK 7 PRACTICE</span>
+        <h2 class="section-title mt-2">How to use Participation Practice</h2>
         <p class="section-copy">
-          You don’t need to be certain. Share what you think so far.
+          Follow these four steps. Start by sharing what you think, even if you’re unsure.
         </p>
 
-        <div class="usage-section mt-4">
-          <p class="usage-intro">
-            You can use Participation Practice before, during or after class.
-          </p>
-
-          <div class="class-cycle">
-            <div class="cycle-item">
-              <div class="cycle-icon">
-                <i class="bi bi-pencil-square"></i>
-              </div>
-              <div>
-                <span class="cycle-label">Before class</span>
-                <p>Share an attempt and get feedback.</p>
+        <div class="mt-4" aria-label="How to use Participation Practice">
+          <div class="row g-3">
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="border rounded-3 p-3 h-100 bg-white">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="action-icon">1</div>
+                  <div>
+                    <strong class="d-block">Share an attempt</strong>
+                    <span class="small text-secondary">Write what you think so far, even if you’re unsure.</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="cycle-item">
-              <div class="cycle-icon">
-                <i class="bi bi-people"></i>
-              </div>
-              <div>
-                <span class="cycle-label">During class</span>
-                <p>Use your response to join the discussion.</p>
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="border rounded-3 p-3 h-100 bg-white">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="action-icon">2</div>
+                  <div>
+                    <strong class="d-block">Get tutor feedback</strong>
+                    <span class="small text-secondary">See what is working and what you could improve.</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="cycle-item">
-              <div class="cycle-icon">
-                <i class="bi bi-arrow-repeat"></i>
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="border rounded-3 p-3 h-100 bg-white">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="action-icon">3</div>
+                  <div>
+                    <strong class="d-block">Try again</strong>
+                    <span class="small text-secondary">Use the feedback to revise the same response.</span>
+                  </div>
+                </div>
               </div>
-              <div>
-                <span class="cycle-label">After class</span>
-                <p>Come back to reflect or revise.</p>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="border rounded-3 p-3 h-100 bg-white">
+                <div class="d-flex gap-3 align-items-start">
+                  <div class="action-icon">4</div>
+                  <div>
+                    <strong class="d-block">Bring it to class</strong>
+                    <span class="small text-secondary">Use your revised idea to help you join the discussion.</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <div class="prompt-box mt-4">
-          <div class="prompt-label">This week's prompt</div>
+          <div class="prompt-label">Start here</div>
           <h3>What’s one concept from this week you’re still unsure about?</h3>
           <p class="mb-0">This doesn’t need to be your final answer.</p>
         </div>
@@ -157,8 +168,8 @@
           </div>
 
           <div>
-            <strong>Share my attempt</strong>
-            <span>Write down what you think so far.</span>
+            <strong>Start my attempt</strong>
+            <span>You can revise it after tutor feedback.</span>
           </div>
 
           <i class="bi bi-arrow-right ms-auto"></i>
@@ -168,8 +179,8 @@
       <div class="content-card mt-4">
         <div class="d-flex justify-content-between align-items-center">
           <div>
-            <span class="eyebrow">CLASS ACTIVITY</span>
-            <h3 class="feed-title mt-1 mb-0">Recent contributions</h3>
+            <span class="eyebrow">OTHER STUDENTS</span>
+            <h3 class="feed-title mt-1 mb-0">See how other students are working through ideas</h3>
           </div>
           <span class="small text-secondary">2 posts</span>
         </div>
@@ -185,8 +196,9 @@
             </div>
 
             <p class="mb-2">
-              Sometimes I could have an answer in my head, but I don’t put my hand up because
-              I feel like everyone else probably understands it better than I do.
+              I think audience is the people you’re communicating with, but I’m still unsure
+              where audience ends and context begins. I almost didn’t post because it feels like
+              everyone else probably understands it already.
             </p>
 
             <div class="post-actions">
@@ -205,8 +217,9 @@
             </div>
 
             <p class="mb-2">
-              If I get something wrong in class, I actually start second guessing the next answer
-              even when I think I know it.
+              I originally thought context mainly meant the setting, but now I think it also
+              includes the purpose and situation. I’m still not completely sure, so I’d like
+              feedback before class.
             </p>
 
             <div class="post-actions">
@@ -226,10 +239,10 @@
           Back to participation board
         </button>
 
-        <span class="eyebrow">YOUR FIRST ATTEMPT</span>
+        <span class="eyebrow">STEP 1 — YOUR ATTEMPT</span>
         <h2 class="section-title mt-2">Share what you think so far</h2>
         <p class="section-copy">
-          It doesn’t have to be right yet. You can come back to it after feedback.
+          Answer both prompts below. Once your tutor replies, use the feedback to revise your response.
         </p>
 
         <form id="attempt-form" class="mt-4">
@@ -246,7 +259,6 @@
           <label for="uncertainty-text" class="form-label fw-semibold mt-4">
             What are you unsure about?
           </label>
-
 
           <textarea
             id="uncertainty-text"
@@ -283,13 +295,10 @@
       </div>
     </section>
 
-
-
-
     <!-- 3. Tutor feedback -->
     <section id="screen-feedback" class="prototype-screen" data-screen="feedback">
       <div class="content-card">
-        <span class="eyebrow">TUTOR FEEDBACK</span>
+        <span class="eyebrow">STEP 2 — READ THE FEEDBACK</span>
         <h2 class="section-title mt-2">Your tutor has replied</h2>
         <p class="section-copy">
           Read the feedback below, then revise your response when you’re ready.
@@ -336,15 +345,13 @@
       </div>
     </section>
 
-
-    
     <!-- 4. Revised attempt -->
     <section id="screen-retry" class="prototype-screen" data-screen="retry">
       <div class="content-card">
-        <span class="eyebrow">TRY AGAIN</span>
+        <span class="eyebrow">STEP 3 — TRY AGAIN</span>
         <h2 class="section-title mt-2">Revise your response</h2>
         <p class="section-copy">
-          Your first response stays here while you work on the next one.
+          Use the tutor suggestion below to revise your response, then submit it.
         </p>
 
         <div class="previous-attempt mt-4">
@@ -396,12 +403,12 @@
         </div>
 
         <span class="eyebrow mt-4 d-inline-block">
-          BEFORE, DURING AND AFTER CLASS
+          STEP 4 — READY FOR CLASS
         </span>
 
-        <h2 class="section-title mt-2">Use your response to prepare for class</h2>
+        <h2 class="section-title mt-2">Bring your revised idea into class</h2>
         <p class="section-copy">
-          The forum supports participation before, during and after the tutorial.
+          You have already tested and improved your response. Save it as something you can use if the topic comes up in class.
         </p>
 
         <div class="journey-grid mt-4">
@@ -476,7 +483,7 @@
   <footer class="prototype-footer">
     <div class="container-fluid px-4 d-flex flex-column flex-md-row justify-content-between gap-2">
       <span>UniLearn — student concept prototype</span>
-      <span>PACM1101 Design Thinking Prototype · V1</span>
+      <span>PACM1101 Design Thinking Prototype · V2.2</span>
     </div>
   </footer>
 
